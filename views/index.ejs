@@ -197,104 +197,83 @@
 
       <!-- Chatbot JavaScript -->
       <script>
-        // Enhanced Travel Chatbot Class
-        class TravelChatbot {
+        // AI-Powered Travel Chatbot Class
+        class AIChatbot {
           constructor() {
-            this.responses = {
-              attractions: {
-                keywords: ['attraction', 'place', 'visit', 'see', 'tourist', 'sightseeing', 'main', 'popular', 'famous'],
-                response: "🏛️ **Top Attractions in Nangal:**\n\n• **Bhakra Dam** - One of India's largest dams with breathtaking views and engineering marvel\n• **Nangal Wetland** - Perfect for bird watching and nature walks, rich biodiversity\n• **Govind Sagar Lake** - Beautiful lake for boating, fishing, and photography\n• **Bhakra Village** - Experience authentic local culture and traditional Punjabi lifestyle\n• **Shoolini Mata Temple** - Sacred spiritual site with panoramic valley views\n• **Nangal Township** - Well-planned city showcasing modern urban architecture\n• **Sutlej Park** - Riverside park ideal for family picnics and evening walks\n• **Shivalik Hills** - Scenic hiking trails with stunning mountain vistas\n\nWhich attraction would you like to know more about? 🤔"
-              },
-              planning: {
-                keywords: ['plan', 'trip', 'itinerary', 'schedule', 'days', 'tour', 'visit plan'],
-                response: "📅 **Let's Plan Your Perfect Nangal Trip!**\n\n**🕐 1-Day Quick Tour:**\n• Morning: Bhakra Dam visit\n• Afternoon: Govind Sagar Lake\n• Evening: Sutlej Park sunset\n\n**🕐 2-Day Comprehensive:**\n• Day 1: Dam, Lake, Township\n• Day 2: Hills, Temple, Village\n\n**🕐 3-Day Relaxed Experience:**\n• Day 1: Arrival + Dam exploration\n• Day 2: Nature trails + Bird watching\n• Day 3: Cultural sites + Shopping\n\n**Tell me:**\n• How many days do you have?\n• Your interests (nature/culture/photography/adventure)?\n• Group size and budget?\n• Any specific requirements?"
-              },
-              timing: {
-                keywords: ['time', 'when', 'season', 'weather', 'month', 'best', 'climate'],
-                response: "🌤️ **Best Time to Visit Nangal:**\n\n**🌸 Spring (March-May)** - EXCELLENT\n• Temperature: 15-25°C\n• Perfect weather for all activities\n• Clear skies, ideal for photography\n• Blooming flowers and pleasant breeze\n\n**🌧️ Monsoon (June-September)** - GOOD\n• Temperature: 20-30°C\n• Lush green landscapes\n• Dam at full capacity (spectacular views)\n• Some outdoor activities may be limited\n\n**❄️ Winter (October-February)** - VERY GOOD\n• Temperature: 5-20°C\n• Cool and comfortable for long walks\n• Crystal clear mountain views\n• Perfect for sightseeing and photography\n\n**☀️ Summer (April-June)** - AVOID\n• Temperature: 25-40°C\n• Can be uncomfortably hot\n• Limited outdoor activities\n\n**Recommendation: October-March for best experience!**"
-              },
-              accommodation: {
-                keywords: ['hotel', 'stay', 'accommodation', 'lodge', 'guest house', 'where', 'sleep', 'rooms'],
-                response: "🏨 **Accommodation Options in Nangal:**\n\n**🌟 Premium Hotels (₹3000-5000/night):**\n• Hotel Bhakra View - Lake facing rooms, restaurant, AC\n• Nangal Regency - Modern amenities, swimming pool\n• Dam View Resort - Scenic location, conference facilities\n\n**🏡 Mid-Range Options (₹1500-3000/night):**\n• Government Guest House - Clean, reliable, central location\n• Tourist Lodge - Basic amenities, budget-friendly\n• Sutlej Inn - Family-friendly, restaurant attached\n\n**🏠 Budget Stays (₹800-1500/night):**\n• Local Homestays - Authentic cultural experience\n• Dharamshala accommodations - Religious stay\n• Backpacker hostels - Shared facilities\n\n**🏕️ Unique Experiences:**\n• Lakeside camping (seasonal)\n• Forest rest houses\n• Government circuit houses\n\n**Need help choosing based on your budget and preferences?**"
-              },
-              food: {
-                keywords: ['food', 'eat', 'restaurant', 'local cuisine', 'dining', 'hungry', 'meal', 'dish'],
-                response: "🍽️ **Culinary Delights of Nangal:**\n\n**🥘 Must-Try Local Specialties:**\n• **Punjabi Thali** - Complete traditional meal with variety\n• **Makki di Roti & Sarson da Saag** - Winter specialty with butter\n• **Fresh Fish Curry** - From Govind Sagar Lake\n• **Chole Bhature** - Spicy chickpeas with fried bread\n• **Lassi & Kulfi** - Traditional drinks and desserts\n• **Rajma Chawal** - Kidney beans with rice\n\n**🍴 Best Dining Spots:**\n• **Hotel Restaurants** - Multi-cuisine, air-conditioned\n• **Local Dhabas** - Authentic roadside eateries\n• **Lakeside Cafes** - Scenic dining with lake views\n• **Street Food Stalls** - Budget-friendly local flavors\n• **Community Kitchens** - Gurudwara free meals\n\n**🌱 Vegetarian Paradise** - Excellent options available!\n**🌶️ Spice Level** - Can be customized for your taste\n\n**Want recommendations for specific meals or dietary requirements?**"
-              },
-              transport: {
-                keywords: ['transport', 'travel', 'bus', 'train', 'car', 'reach', 'how to get', 'journey'],
-                response: "🚗 **How to Reach Nangal:**\n\n**✈️ By Air:**\n• **Chandigarh Airport** (60 km, 1.5 hours)\n• Regular flights from Delhi, Mumbai, Bangalore\n• Taxi/bus available from airport\n\n**🚂 By Train:**\n• **Nangal Dam Railway Station** - Direct connectivity\n• Trains from Delhi (6-7 hours), Mumbai (24 hours)\n• **Anandpur Sahib** (20 km) - Alternative station\n\n**🚌 By Road:**\n• **From Delhi:** 280 km via NH-205 (5-6 hours)\n• **From Chandigarh:** 60 km (1.5 hours)\n• **From Amritsar:** 150 km (3 hours)\n• Regular bus services available\n\n**🚕 Local Transport:**\n• Auto-rickshaws - ₹20-100 for city rides\n• Cycle rickshaws - Eco-friendly option\n• Taxi services - ₹15-20 per km\n• Bike rentals - ₹300-500 per day\n\n**🛣️ Road Conditions:** Well-maintained highways\n**⛽ Fuel:** Plenty of petrol pumps available"
-              },
-              activities: {
-                keywords: ['activity', 'things to do', 'fun', 'adventure', 'recreation', 'sports'],
-                response: "🎯 **Activities & Things to Do:**\n\n**🚶 Nature Activities:**\n• Hiking in Shivalik Hills\n• Bird watching at Nangal Wetland\n• Boating on Govind Sagar Lake\n• Nature photography walks\n• Sunrise/sunset viewing\n\n**🏛️ Cultural Experiences:**\n• Visit local temples and gurudwaras\n• Explore traditional markets\n• Village cultural tours\n• Local craft workshops\n• Festival participation (seasonal)\n\n**🎣 Water Activities:**\n• Fishing in the lake (with permits)\n• Lakeside picnics\n• Water sports (seasonal)\n• Dam engineering tours\n\n**👨‍👩‍👧‍👦 Family Fun:**\n• Park visits and playground time\n• Local food tours\n• Heritage walks\n• Shopping for local handicrafts\n\n**What type of activities interest you most?**"
-              }
-            };
-
-            this.greetings = ['hello', 'hi', 'hey', 'good morning', 'good evening', 'namaste'];
-            this.goodbyes = ['bye', 'goodbye', 'see you', 'thanks', 'thank you'];
+            this.conversationHistory = [];
+            this.isLoading = false;
           }
 
-          getResponse(input) {
-            const lowerInput = input.toLowerCase().trim();
+          async getResponse(input) {
+            if (this.isLoading) return null;
+            
+            this.isLoading = true;
+            
+            try {
+              const response = await fetch('/api/chatbot/chat', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                  message: input,
+                  conversationHistory: this.conversationHistory
+                })
+              });
 
-            // Handle greetings
-            if (this.greetings.some(greeting => lowerInput.includes(greeting))) {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+
+              const data = await response.json();
+              
+              // Update conversation history
+              this.conversationHistory.push(
+                { role: 'user', content: input },
+                { role: 'assistant', content: data.response }
+              );
+              
+              // Keep only last 20 messages to manage memory
+              if (this.conversationHistory.length > 20) {
+                this.conversationHistory = this.conversationHistory.slice(-20);
+              }
+              
               return {
-                response: "Hello! 🙏 Welcome to Nangal Tourism! I'm your virtual guide to explore the beautiful city of Nangal. How can I help you plan your perfect visit today?",
-                intent: 'greeting'
+                response: data.response,
+                suggestions: data.suggestions || [],
+                fallback: data.fallback || false
               };
+              
+            } catch (error) {
+              console.error('Error calling AI API:', error);
+              return this.getFallbackResponse(input);
+            } finally {
+              this.isLoading = false;
             }
-
-            // Handle goodbyes
-            if (this.goodbyes.some(goodbye => lowerInput.includes(goodbye))) {
+          }
+          
+          getFallbackResponse(input) {
+            const lowerInput = input.toLowerCase();
+            
+            if (lowerInput.includes('hello') || lowerInput.includes('hi')) {
               return {
-                response: "Thank you for using Nangal Tourism Assistant! 🙏 Have a wonderful trip to Nangal! Feel free to ask me anything anytime. Safe travels! 🛫",
-                intent: 'goodbye'
+                response: "Hello! 🙏 Welcome to Nangal Tourism! I'm here to help you explore the beautiful city of Nangal. How can I assist you today?",
+                suggestions: ['Main attractions', 'Plan a trip', 'Best time to visit', 'Where to stay'],
+                fallback: true
               };
             }
             
-            // Handle Shivalik Hills specifically
-            if (lowerInput.includes('shivalik') || lowerInput.includes('hills')) {
-              return {
-                response: "🏔️ **Shivalik Hills in Nangal**\n\n• **Geography**: Part of the outer Himalayan range\n• **Elevation**: 350m to 1,500m above sea level\n• **Vegetation**: Rich pine forests and diverse flora\n• **Wildlife**: Home to various bird species and small mammals\n• **Activities**: Hiking, trekking, nature walks, photography\n• **Best Trails**: Naina Devi trail, Bhakra viewpoint trek\n• **Best Time**: October to March for clear views\n• **Difficulty**: Easy to moderate trails available\n\nThe Shivalik Hills offer breathtaking panoramic views of Nangal and the surrounding valleys. Would you like to know about guided tours or specific hiking routes?",
-                intent: 'attractions'
-              };
-            }
-
-            // Check for specific categories
-            for (const [category, data] of Object.entries(this.responses)) {
-              if (data.keywords.some(keyword => lowerInput.includes(keyword))) {
-                return {
-                  response: data.response,
-                  intent: category
-                };
-              }
-            }
-
-            // Default response with helpful suggestions
             return {
-              response: "I'd be happy to help you explore Nangal! 🏔️✨\n\n**I can provide detailed information about:**\n• 🏛️ Tourist attractions and must-visit places\n• 📅 Trip planning and customized itineraries\n• 🌤️ Best time to visit and weather information\n• 🏨 Hotels and accommodation options\n• 🍽️ Food, dining, and local cuisine\n• 🚗 Transportation and travel details\n• 🎯 Activities and things to do\n\n**Just ask me something like:**\n• \"What are the main attractions?\"\n• \"Plan a 2-day trip\"\n• \"Best time to visit?\"\n• \"Where to stay?\"\n\nWhat would you like to know about Nangal? 😊",
-              intent: 'unknown'
+              response: "I'm here to help you explore Nangal! 🏔️ I can provide information about attractions, accommodation, food, transportation, and trip planning. What would you like to know?",
+              suggestions: ['Main attractions', 'Plan a trip', 'Best time to visit', 'Where to stay'],
+              fallback: true
             };
           }
         }
 
-        // Initialize chatbot
-        const chatbot = new TravelChatbot();
+        // Initialize AI chatbot
+        const chatbot = new AIChatbot();
         
-        // Default suggestions for different intents
-        const defaultSuggestions = {
-          attractions: ['Tell me about Bhakra Dam', 'What are Shivalik Hills?', 'Govind Sagar Lake activities'],
-          planning: ['Plan a 2-day trip', 'Nature activities', 'Family-friendly itinerary'],
-          timing: ['Best hotels to stay', 'Winter activities', 'Monsoon precautions'],
-          accommodation: ['Budget stays', 'Hotels near dam', 'Homestay options'],
-          food: ['Local specialties', 'Vegetarian options', 'Best restaurants'],
-          transport: ['Local transport', 'Taxi services', 'Parking facilities'],
-          activities: ['Adventure activities', 'Family activities', 'Cultural experiences'],
-          default: ['Main attractions', 'Plan a trip', 'Best time to visit', 'Where to stay']
-        };
-
         // DOM elements
         const chatbotToggle = document.getElementById('chatbot-toggle');
         const chatbotWindow = document.getElementById('chatbot-window');
@@ -319,7 +298,7 @@
         });
 
         // Send message function
-        function sendMessage() {
+        async function sendMessage() {
           const message = chatInput.value.trim();
           if (message) {
             addMessage(message, 'user');
@@ -329,19 +308,29 @@
             showTypingIndicator();
 
             // Get bot response after a realistic delay
-            setTimeout(() => {
-              const response = chatbot.getResponse(message);
-              hideTypingIndicator();
-              addMessage(response.response, 'bot');
+            try {
+              const response = await chatbot.getResponse(message);
               
-              // Show relevant suggestions based on the response intent
-              showSuggestions(response.intent);
-            }, 1000 + Math.random() * 1000); // Random delay between 1-2 seconds
+              hideTypingIndicator();
+              
+              if (response) {
+                addMessage(response.response, 'bot', response.fallback);
+                showSuggestions(response.suggestions);
+              } else {
+                addMessage("I'm currently processing your request. Please try again in a moment.", 'bot', true);
+                showSuggestions(['Main attractions', 'Plan a trip', 'Best time to visit']);
+              }
+              
+            } catch (error) {
+              hideTypingIndicator();
+              addMessage("I'm having trouble connecting right now. Please try again later.", 'bot', true);
+              showSuggestions(['Main attractions', 'Plan a trip', 'Best time to visit']);
+            }
           }
         }
 
         // Add message to chat
-        function addMessage(text, sender) {
+        function addMessage(text, sender, isFallback = false) {
           const messageDiv = document.createElement('div');
           messageDiv.className = `message ${sender}`;
 
@@ -359,6 +348,14 @@
             .replace(/• (.*?)(?=<br>|$)/g, '• <span style="margin-left: 8px;">$1</span>');
 
           content.innerHTML = formattedText;
+
+          // Add fallback indicator if needed
+          if (isFallback && sender === 'bot') {
+            const fallbackIndicator = document.createElement('div');
+            fallbackIndicator.className = 'fallback-indicator';
+            fallbackIndicator.innerHTML = '<small style="color: #888; font-style: italic;">⚠️ Limited mode - AI temporarily unavailable</small>';
+            content.appendChild(fallbackIndicator);
+          }
 
           messageDiv.appendChild(avatar);
           messageDiv.appendChild(content);
@@ -384,74 +381,20 @@
           typingIndicator.style.display = 'none';
         }
 
-        // Show suggestions based on intent
-        function showSuggestions(intent) {
+        // Show suggestions
+        function showSuggestions(suggestions) {
           // Clear previous suggestions
           suggestionsContainer.innerHTML = '';
           suggestionsContainer.style.display = 'flex';
           
-          // Define suggestions based on intent
-          let suggestions = [];
-          
-          switch(intent) {
-            case 'attractions':
-              suggestions = [
-                'Tell me about Bhakra Dam',
-                'What are Shivalik Hills?',
-                'Govind Sagar Lake activities'
-              ];
-              break;
-            case 'planning':
-              suggestions = [
-                'Plan a 2-day trip',
-                'Nature activities',
-                'Family-friendly itinerary'
-              ];
-              break;
-            case 'timing':
-              suggestions = [
-                'Best hotels to stay',
-                'Winter activities',
-                'Monsoon precautions'
-              ];
-              break;
-            case 'accommodation':
-              suggestions = [
-                'Budget stays',
-                'Hotels near dam',
-                'Homestay options'
-              ];
-              break;
-            case 'food':
-              suggestions = [
-                'Local specialties',
-                'Vegetarian options',
-                'Best restaurants'
-              ];
-              break;
-            case 'transport':
-              suggestions = [
-                'Local transport',
-                'Taxi services',
-                'Parking facilities'
-              ];
-              break;
-            case 'activities':
-              suggestions = [
-                'Adventure activities',
-                'Family activities',
-                'Cultural experiences'
-              ];
-              break;
-            case 'greeting':
-            case 'unknown':
-            default:
-              suggestions = [
-                'Main attractions',
-                'Plan a trip',
-                'Best time to visit',
-                'Where to stay'
-              ];
+          // Use provided suggestions or default ones
+          if (!suggestions || suggestions.length === 0) {
+            suggestions = [
+              'Main attractions',
+              'Plan a trip',
+              'Best time to visit',
+              'Where to stay'
+            ];
           }
           
           // Create suggestion buttons
