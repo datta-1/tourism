@@ -132,7 +132,7 @@ function generateMockResponse(message, conversationHistory = []) {
   };
 }
 
-// Chat endpoint with mock responses
+// Chat endpoint with mock responses only
 router.post('/chat', async (req, res) => {
   try {
     const { message, conversationHistory = [] } = req.body;
@@ -143,10 +143,10 @@ router.post('/chat', async (req, res) => {
       });
     }
 
-    // Simulate AI processing delay
+    // Simulate AI processing delay for realistic experience
     await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 1200));
 
-    // Generate mock response
+    // Generate mock response - NO OpenAI API calls
     const mockResponse = generateMockResponse(message, conversationHistory);
 
     res.json({
