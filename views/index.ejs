@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- Responsive design meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO meta -->
+  <meta name="description"
+    content="Discover the serene beauty and cultural heritage of Nangal with Nangal Tourism. Plan your perfect visit today!" />
+  <meta name="keywords" content="Nangal, Tourism, Bhakra Dam, Sutlej Park, Shivalik Hills, Travel, Nature" />
+  <meta name="author" content="Nangal Tourism" />
+
+  <title>Nangal Tourism | Discover Tranquility</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+</head>
+
+<body>
+
+  <!-- Include header partial -->
+  <%- include('partials/header') %>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero text-center py-5 bg-light" role="banner"
+        aria-label="Hero section introducing Nangal Tourism">
+        <div class="container">
+          <h1 class="display-4 fw-bold text-primary">Discover Nangal</h1>
+          <p class="lead text-secondary">Your gateway to nature, serenity, and cultural heritage.</p>
+          <a href="/contact" class="btn btn-primary btn-lg mt-3" role="button"
+            aria-label="Plan your visit to Nangal">Plan Your Visit</a>
+        </div>
+      </section>
+
+      <!-- Scenic Carousel -->
+      <section class="scenic-testimonials py-5 bg-white">
+        <div class="container">
+          <h2 class="text-center fw-bold mb-5">Nangal in Pictures</h2>
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Scenic Testimonials">
+
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            </div>
+
+            <!-- Carousel items -->
+            <div class="carousel-inner text-center">
+              <div class="carousel-item active">
+                <img src="/images/nangal-view.webp" class="d-block mx-auto img-fluid rounded shadow mb-3"
+                  alt="Nangal valley view" />
+                <blockquote class="blockquote">
+                  <p class="fs-5 fst-italic">"Feel the calmness of the valley."</p>
+                </blockquote>
+              </div>
+
+              <div class="carousel-item">
+                <img src="/images/sutlej-river.jpg" class="d-block mx-auto img-fluid rounded shadow mb-3"
+                  alt="Bhakra Dam and Sutlej River" />
+                <blockquote class="blockquote">
+                  <p class="fs-5 fst-italic">"Majestic waterworks that power the region."</p>
+                </blockquote>
+              </div>
+
+              <div class="carousel-item">
+                <img src="/images/sunset.jpg" class="d-block mx-auto img-fluid rounded shadow mb-3"
+                  alt="Sunset at Nangal hills" />
+                <blockquote class="blockquote">
+                  <p class="fs-5 fst-italic">"Witness breathtaking sunsets behind the hills."</p>
+                </blockquote>
+              </div>
+
+              <div class="carousel-item">
+                <img src="/images/forest.jpg" class="d-block mx-auto img-fluid rounded shadow mb-3"
+                  alt="Nature trail in Nangal forest" />
+                <blockquote class="blockquote">
+                  <p class="fs-5 fst-italic">"Nature trails perfect for soul-refreshing walks."</p>
+                </blockquote>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev" aria-label="Previous slide">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+              data-bs-slide="next" aria-label="Next slide">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Destinations Section -->
+      <section class="asin-places py-5 bg-white" aria-labelledby="asin-places-title">
+        <div class="container text-center">
+          <h2 id="asin-places-title" class="mb-4 fw-bold text-primary">Amazing Places</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="p-4 border rounded-4 shadow-sm h-100 d-flex flex-column">
+                <img src="/images/hill.jpg" class="img-fluid mb-3 rounded" alt="Shivalik Hills" loading="lazy" />
+                <h3 class="h5 fw-semibold">Shivalik Hills</h3>
+                <p class="text-muted flex-grow-1">Explore scenic trails and panoramic views from these peaceful forested
+                  hills.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-4 border rounded-4 shadow-sm h-100 d-flex flex-column">
+                <img src="/images/park.jpg" class="img-fluid mb-3 rounded" alt="Sutlej Park" loading="lazy" />
+                <h3 class="h5 fw-semibold">Sutlej Park</h3>
+                <p class="text-muted flex-grow-1">A beautiful riverside park, perfect for family outings, walks, and
+                  photography.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="p-4 border rounded-4 shadow-sm h-100 d-flex flex-column">
+                <img src="/images/bhakra-dam.jpg" class="img-fluid mb-3 rounded" alt="Bhakra Dam" loading="lazy" />
+                <h3 class="h5 fw-semibold">Bhakra Dam</h3>
+                <p class="text-muted flex-grow-1">One of India's greatest engineering marvels offering stunning views
+                  and calm waters.</p>
+              </div>
+            </div>
+          </div>
+          <a href="/places" class="btn btn-outline-primary mt-4">Explore More Places</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container">
+      <!-- Toggle Button -->
+      <button class="chatbot-toggle" id="chatbot-toggle">
+        💬
+      </button>
+
+      <!-- Chat Window -->
+      <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+          <h5>🏔️ Nangal Tourism Assistant</h5>
+          <button class="chatbot-close" id="chatbot-close">×</button>
+        </div>
+
+        <div class="chatbot-messages" id="chatbot-messages">
+          <!-- Welcome message -->
+          <div class="message bot">
+            <div class="message-avatar">🤖</div>
+            <div class="message-content">
+              Welcome to Nangal Tourism! 🏔️ I'm here to help you explore the beautiful city of Nangal. What would you
+              like to know?
+            </div>
+          </div>
+        </div>
+
+        <div class="typing-indicator" id="typing-indicator">
+          Bot is typing...
+        </div>
+
+        <div class="suggestions" id="suggestions">
+          <button class="suggestion-btn" onclick="sendSuggestion('What are the main attractions?')">Main
+            Attractions</button>
+          <button class="suggestion-btn" onclick="sendSuggestion('Plan a 2-day trip')">Plan Trip</button>
+          <button class="suggestion-btn" onclick="sendSuggestion('Best time to visit?')">Best Time</button>
+          <button class="suggestion-btn" onclick="sendSuggestion('Where to stay?')">Hotels</button>
+        </div>
+
+        <div class="chatbot-input">
+          <div class="input-group">
+            <input type="text" class="chat-input" id="chat-input" placeholder="Type your message..." />
+            <button class="send-btn" id="send-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include footer partial -->
+    <%- include('partials/footer') %>
+
+      <!-- Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Chatbot JavaScript -->
+      <script>
+        // Enhanced Travel Chatbot Class
+        class TravelChatbot {
+          constructor() {
+            this.responses = {
+              attractions: {
+                keywords: ['attraction', 'place', 'visit', 'see', 'tourist', 'sightseeing', 'main', 'popular', 'famous'],
+                response: "🏛️ **Top Attractions in Nangal:**\n\n• **Bhakra Dam** - One of India's largest dams with breathtaking views and engineering marvel\n• **Nangal Wetland** - Perfect for bird watching and nature walks, rich biodiversity\n• **Govind Sagar Lake** - Beautiful lake for boating, fishing, and photography\n• **Bhakra Village** - Experience authentic local culture and traditional Punjabi lifestyle\n• **Shoolini Mata Temple** - Sacred spiritual site with panoramic valley views\n• **Nangal Township** - Well-planned city showcasing modern urban architecture\n• **Sutlej Park** - Riverside park ideal for family picnics and evening walks\n• **Shivalik Hills** - Scenic hiking trails with stunning mountain vistas\n\nWhich attraction would you like to know more about? 🤔"
+              },
+              planning: {
+                keywords: ['plan', 'trip', 'itinerary', 'schedule', 'days', 'tour', 'visit plan'],
+                response: "📅 **Let's Plan Your Perfect Nangal Trip!**\n\n**🕐 1-Day Quick Tour:**\n• Morning: Bhakra Dam visit\n• Afternoon: Govind Sagar Lake\n• Evening: Sutlej Park sunset\n\n**🕐 2-Day Comprehensive:**\n• Day 1: Dam, Lake, Township\n• Day 2: Hills, Temple, Village\n\n**🕐 3-Day Relaxed Experience:**\n• Day 1: Arrival + Dam exploration\n• Day 2: Nature trails + Bird watching\n• Day 3: Cultural sites + Shopping\n\n**Tell me:**\n• How many days do you have?\n• Your interests (nature/culture/photography/adventure)?\n• Group size and budget?\n• Any specific requirements?"
+              },
+              timing: {
+                keywords: ['time', 'when', 'season', 'weather', 'month', 'best', 'climate'],
+                response: "🌤️ **Best Time to Visit Nangal:**\n\n**🌸 Spring (March-May)** - EXCELLENT\n• Temperature: 15-25°C\n• Perfect weather for all activities\n• Clear skies, ideal for photography\n• Blooming flowers and pleasant breeze\n\n**🌧️ Monsoon (June-September)** - GOOD\n• Temperature: 20-30°C\n• Lush green landscapes\n• Dam at full capacity (spectacular views)\n• Some outdoor activities may be limited\n\n**❄️ Winter (October-February)** - VERY GOOD\n• Temperature: 5-20°C\n• Cool and comfortable for long walks\n• Crystal clear mountain views\n• Perfect for sightseeing and photography\n\n**☀️ Summer (April-June)** - AVOID\n• Temperature: 25-40°C\n• Can be uncomfortably hot\n• Limited outdoor activities\n\n**Recommendation: October-March for best experience!**"
+              },
+              accommodation: {
+                keywords: ['hotel', 'stay', 'accommodation', 'lodge', 'guest house', 'where', 'sleep', 'rooms'],
+                response: "🏨 **Accommodation Options in Nangal:**\n\n**🌟 Premium Hotels (₹3000-5000/night):**\n• Hotel Bhakra View - Lake facing rooms, restaurant, AC\n• Nangal Regency - Modern amenities, swimming pool\n• Dam View Resort - Scenic location, conference facilities\n\n**🏡 Mid-Range Options (₹1500-3000/night):**\n• Government Guest House - Clean, reliable, central location\n• Tourist Lodge - Basic amenities, budget-friendly\n• Sutlej Inn - Family-friendly, restaurant attached\n\n**🏠 Budget Stays (₹800-1500/night):**\n• Local Homestays - Authentic cultural experience\n• Dharamshala accommodations - Religious stay\n• Backpacker hostels - Shared facilities\n\n**🏕️ Unique Experiences:**\n• Lakeside camping (seasonal)\n• Forest rest houses\n• Government circuit houses\n\n**Need help choosing based on your budget and preferences?**"
+              },
+              food: {
+                keywords: ['food', 'eat', 'restaurant', 'local cuisine', 'dining', 'hungry', 'meal', 'dish'],
+                response: "🍽️ **Culinary Delights of Nangal:**\n\n**🥘 Must-Try Local Specialties:**\n• **Punjabi Thali** - Complete traditional meal with variety\n• **Makki di Roti & Sarson da Saag** - Winter specialty with butter\n• **Fresh Fish Curry** - From Govind Sagar Lake\n• **Chole Bhature** - Spicy chickpeas with fried bread\n• **Lassi & Kulfi** - Traditional drinks and desserts\n• **Rajma Chawal** - Kidney beans with rice\n\n**🍴 Best Dining Spots:**\n• **Hotel Restaurants** - Multi-cuisine, air-conditioned\n• **Local Dhabas** - Authentic roadside eateries\n• **Lakeside Cafes** - Scenic dining with lake views\n• **Street Food Stalls** - Budget-friendly local flavors\n• **Community Kitchens** - Gurudwara free meals\n\n**🌱 Vegetarian Paradise** - Excellent options available!\n**🌶️ Spice Level** - Can be customized for your taste\n\n**Want recommendations for specific meals or dietary requirements?**"
+              },
+              transport: {
+                keywords: ['transport', 'travel', 'bus', 'train', 'car', 'reach', 'how to get', 'journey'],
+                response: "🚗 **How to Reach Nangal:**\n\n**✈️ By Air:**\n• **Chandigarh Airport** (60 km, 1.5 hours)\n• Regular flights from Delhi, Mumbai, Bangalore\n• Taxi/bus available from airport\n\n**🚂 By Train:**\n• **Nangal Dam Railway Station** - Direct connectivity\n• Trains from Delhi (6-7 hours), Mumbai (24 hours)\n• **Anandpur Sahib** (20 km) - Alternative station\n\n**🚌 By Road:**\n• **From Delhi:** 280 km via NH-205 (5-6 hours)\n• **From Chandigarh:** 60 km (1.5 hours)\n• **From Amritsar:** 150 km (3 hours)\n• Regular bus services available\n\n**🚕 Local Transport:**\n• Auto-rickshaws - ₹20-100 for city rides\n• Cycle rickshaws - Eco-friendly option\n• Taxi services - ₹15-20 per km\n• Bike rentals - ₹300-500 per day\n\n**🛣️ Road Conditions:** Well-maintained highways\n**⛽ Fuel:** Plenty of petrol pumps available"
+              },
+              activities: {
+                keywords: ['activity', 'things to do', 'fun', 'adventure', 'recreation', 'sports'],
+                response: "🎯 **Activities & Things to Do:**\n\n**🚶 Nature Activities:**\n• Hiking in Shivalik Hills\n• Bird watching at Nangal Wetland\n• Boating on Govind Sagar Lake\n• Nature photography walks\n• Sunrise/sunset viewing\n\n**🏛️ Cultural Experiences:**\n• Visit local temples and gurudwaras\n• Explore traditional markets\n• Village cultural tours\n• Local craft workshops\n• Festival participation (seasonal)\n\n**🎣 Water Activities:**\n• Fishing in the lake (with permits)\n• Lakeside picnics\n• Water sports (seasonal)\n• Dam engineering tours\n\n**👨‍👩‍👧‍👦 Family Fun:**\n• Park visits and playground time\n• Local food tours\n• Heritage walks\n• Shopping for local handicrafts\n\n**What type of activities interest you most?**"
+              }
+            };
+
+            this.greetings = ['hello', 'hi', 'hey', 'good morning', 'good evening', 'namaste'];
+            this.goodbyes = ['bye', 'goodbye', 'see you', 'thanks', 'thank you'];
+          }
+
+          getResponse(input) {
+            const lowerInput = input.toLowerCase().trim();
+
+            // Handle greetings
+            if (this.greetings.some(greeting => lowerInput.includes(greeting))) {
+              return {
+                response: "Hello! 🙏 Welcome to Nangal Tourism! I'm your virtual guide to explore the beautiful city of Nangal. How can I help you plan your perfect visit today?",
+                intent: 'greeting'
+              };
+            }
+
+            // Handle goodbyes
+            if (this.goodbyes.some(goodbye => lowerInput.includes(goodbye))) {
+              return {
+                response: "Thank you for using Nangal Tourism Assistant! 🙏 Have a wonderful trip to Nangal! Feel free to ask me anything anytime. Safe travels! 🛫",
+                intent: 'goodbye'
+              };
+            }
+            
+            // Handle Shivalik Hills specifically
+            if (lowerInput.includes('shivalik') || lowerInput.includes('hills')) {
+              return {
+                response: "🏔️ **Shivalik Hills in Nangal**\n\n• **Geography**: Part of the outer Himalayan range\n• **Elevation**: 350m to 1,500m above sea level\n• **Vegetation**: Rich pine forests and diverse flora\n• **Wildlife**: Home to various bird species and small mammals\n• **Activities**: Hiking, trekking, nature walks, photography\n• **Best Trails**: Naina Devi trail, Bhakra viewpoint trek\n• **Best Time**: October to March for clear views\n• **Difficulty**: Easy to moderate trails available\n\nThe Shivalik Hills offer breathtaking panoramic views of Nangal and the surrounding valleys. Would you like to know about guided tours or specific hiking routes?",
+                intent: 'attractions'
+              };
+            }
+
+            // Check for specific categories
+            for (const [category, data] of Object.entries(this.responses)) {
+              if (data.keywords.some(keyword => lowerInput.includes(keyword))) {
+                return {
+                  response: data.response,
+                  intent: category
+                };
+              }
+            }
+
+            // Default response with helpful suggestions
+            return {
+              response: "I'd be happy to help you explore Nangal! 🏔️✨\n\n**I can provide detailed information about:**\n• 🏛️ Tourist attractions and must-visit places\n• 📅 Trip planning and customized itineraries\n• 🌤️ Best time to visit and weather information\n• 🏨 Hotels and accommodation options\n• 🍽️ Food, dining, and local cuisine\n• 🚗 Transportation and travel details\n• 🎯 Activities and things to do\n\n**Just ask me something like:**\n• \"What are the main attractions?\"\n• \"Plan a 2-day trip\"\n• \"Best time to visit?\"\n• \"Where to stay?\"\n\nWhat would you like to know about Nangal? 😊",
+              intent: 'unknown'
+            };
+          }
+        }
+
+        // Initialize chatbot
+        const chatbot = new TravelChatbot();
+        
+        // Default suggestions for different intents
+        const defaultSuggestions = {
+          attractions: ['Tell me about Bhakra Dam', 'What are Shivalik Hills?', 'Govind Sagar Lake activities'],
+          planning: ['Plan a 2-day trip', 'Nature activities', 'Family-friendly itinerary'],
+          timing: ['Best hotels to stay', 'Winter activities', 'Monsoon precautions'],
+          accommodation: ['Budget stays', 'Hotels near dam', 'Homestay options'],
+          food: ['Local specialties', 'Vegetarian options', 'Best restaurants'],
+          transport: ['Local transport', 'Taxi services', 'Parking facilities'],
+          activities: ['Adventure activities', 'Family activities', 'Cultural experiences'],
+          default: ['Main attractions', 'Plan a trip', 'Best time to visit', 'Where to stay']
+        };
+
+        // DOM elements
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatInput = document.getElementById('chat-input');
+        const sendBtn = document.getElementById('send-btn');
+        const messagesContainer = document.getElementById('chatbot-messages');
+        const typingIndicator = document.getElementById('typing-indicator');
+        const suggestionsContainer = document.getElementById('suggestions');
+
+        // Toggle chatbot
+        chatbotToggle.addEventListener('click', () => {
+          chatbotWindow.classList.toggle('active');
+          if (chatbotWindow.classList.contains('active')) {
+            chatInput.focus();
+          }
+        });
+
+        // Close chatbot
+        chatbotClose.addEventListener('click', () => {
+          chatbotWindow.classList.remove('active');
+        });
+
+        // Send message function
+        function sendMessage() {
+          const message = chatInput.value.trim();
+          if (message) {
+            addMessage(message, 'user');
+            chatInput.value = '';
+
+            // Show typing indicator
+            showTypingIndicator();
+
+            // Get bot response after a realistic delay
+            setTimeout(() => {
+              const response = chatbot.getResponse(message);
+              hideTypingIndicator();
+              addMessage(response.response, 'bot');
+              
+              // Show relevant suggestions based on the response intent
+              showSuggestions(response.intent);
+            }, 1000 + Math.random() * 1000); // Random delay between 1-2 seconds
+          }
+        }
+
+        // Add message to chat
+        function addMessage(text, sender) {
+          const messageDiv = document.createElement('div');
+          messageDiv.className = `message ${sender}`;
+
+          const avatar = document.createElement('div');
+          avatar.className = 'message-avatar';
+          avatar.textContent = sender === 'user' ? '👤' : '🤖';
+
+          const content = document.createElement('div');
+          content.className = 'message-content';
+
+          // Enhanced text formatting
+          const formattedText = text
+            .replace(/\n/g, '<br>')
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/• (.*?)(?=<br>|$)/g, '• <span style="margin-left: 8px;">$1</span>');
+
+          content.innerHTML = formattedText;
+
+          messageDiv.appendChild(avatar);
+          messageDiv.appendChild(content);
+
+          messagesContainer.appendChild(messageDiv);
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+          
+          // Animate message appearance
+          setTimeout(() => {
+            messageDiv.style.opacity = '1';
+            messageDiv.style.transform = 'translateY(0)';
+          }, 10);
+        }
+
+        // Show typing indicator
+        function showTypingIndicator() {
+          typingIndicator.style.display = 'block';
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        // Hide typing indicator
+        function hideTypingIndicator() {
+          typingIndicator.style.display = 'none';
+        }
+
+        // Show suggestions based on intent
+        function showSuggestions(intent) {
+          // Clear previous suggestions
+          suggestionsContainer.innerHTML = '';
+          suggestionsContainer.style.display = 'flex';
+          
+          // Define suggestions based on intent
+          let suggestions = [];
+          
+          switch(intent) {
+            case 'attractions':
+              suggestions = [
+                'Tell me about Bhakra Dam',
+                'What are Shivalik Hills?',
+                'Govind Sagar Lake activities'
+              ];
+              break;
+            case 'planning':
+              suggestions = [
+                'Plan a 2-day trip',
+                'Nature activities',
+                'Family-friendly itinerary'
+              ];
+              break;
+            case 'timing':
+              suggestions = [
+                'Best hotels to stay',
+                'Winter activities',
+                'Monsoon precautions'
+              ];
+              break;
+            case 'accommodation':
+              suggestions = [
+                'Budget stays',
+                'Hotels near dam',
+                'Homestay options'
+              ];
+              break;
+            case 'food':
+              suggestions = [
+                'Local specialties',
+                'Vegetarian options',
+                'Best restaurants'
+              ];
+              break;
+            case 'transport':
+              suggestions = [
+                'Local transport',
+                'Taxi services',
+                'Parking facilities'
+              ];
+              break;
+            case 'activities':
+              suggestions = [
+                'Adventure activities',
+                'Family activities',
+                'Cultural experiences'
+              ];
+              break;
+            case 'greeting':
+            case 'unknown':
+            default:
+              suggestions = [
+                'Main attractions',
+                'Plan a trip',
+                'Best time to visit',
+                'Where to stay'
+              ];
+          }
+          
+          // Create suggestion buttons
+          suggestions.forEach(suggestion => {
+            const button = document.createElement('button');
+            button.className = 'suggestion-btn';
+            button.textContent = suggestion;
+            button.onclick = () => sendSuggestion(suggestion);
+            suggestionsContainer.appendChild(button);
+          });
+        }
+        
+        // Hide suggestions
+        function hideSuggestions() {
+          suggestionsContainer.style.display = 'none';
+        }
+
+        // Send suggestion
+        function sendSuggestion(text) {
+          chatInput.value = text;
+          sendMessage();
+        }
+
+        // Event listeners
+        sendBtn.addEventListener('click', sendMessage);
+
+        chatInput.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') {
+            sendMessage();
+          }
+        });
+
+        // Close chatbot when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!chatbotWindow.contains(e.target) && !chatbotToggle.contains(e.target)) {
+            chatbotWindow.classList.remove('active');
+          }
+        });
+
+        // Auto-focus on input when chatbot opens
+        const observer = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+              if (chatbotWindow.classList.contains('active')) {
+                setTimeout(() => chatInput.focus(), 100);
+              }
+            }
+          });
+        });
+
+        observer.observe(chatbotWindow, { attributes: true });
+      </script>
+
+</body>
+
+</html>
